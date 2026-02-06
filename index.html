@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Indixa</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+
+<body>
+  <header>
+    📍 <span id="locationText">Detecting location…</span>
+  </header>
+
+  <main>
+    <h1>Search anything</h1>
+
+    <input id="searchInput" placeholder="cab, sabzi, koi kaam"/>
+
+    <div class="quick">
+      <button data-q="cab">🚕 Cab</button>
+      <button data-q="grocery">🛒 Grocery</button>
+      <button data-q="service">🔧 Service</button>
+    </div>
+
+    <button id="photoBtn">📷 Upload Photo</button>
+    <input id="camera" type="file" accept="image/*" hidden/>
+
+    <div id="resultBox"></div>
+
+    <a href="partner/partner.html">🤝 Join as Partner</a>
+  </main>
+
+  <script type="module" src="app.js"></script>
+</body>
+</html>

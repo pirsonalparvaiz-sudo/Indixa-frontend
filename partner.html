@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Indixa – Partner</title>
+  <link rel="stylesheet" href="../style.css"/>
+</head>
+
+<body>
+  <h1>Partner Panel</h1>
+
+  <!-- DUTY -->
+  <div class="card">
+    <h3>Duty Status</h3>
+    <label>
+      <input type="checkbox" id="dutyToggle" />
+      On Duty
+    </label>
+  </div>
+
+  <!-- INCOMING REQUEST -->
+  <div class="card">
+    <h3>New Request</h3>
+    <div id="requestBox">No active request</div>
+
+    <div class="quick">
+      <button id="acceptBtn">✅ Accept</button>
+      <button id="rejectBtn">❌ Reject</button>
+    </div>
+  </div>
+
+  <!-- STATUS -->
+  <div class="card">
+    <h3>Status</h3>
+    <div id="statusBox">Waiting…</div>
+  </div>
+
+  <script type="module" src="partner.js"></script>
+</body>
+</html>

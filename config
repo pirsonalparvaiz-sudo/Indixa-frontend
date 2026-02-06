@@ -1,0 +1,23 @@
+// config/config.js
+export const CONFIG = {
+FEATURES: {
+LOCATION: true,
+CAMERA: true,
+SEARCH: true,
+PARTNER: true,
+ADMIN: true,
+},
+
+INTEGRATIONS: {
+MAP: false,
+WHATSAPP: false,
+SMS: false,
+PAYMENT: false,
+AI: false,
+},
+
+LIMITS: {
+SEARCH_RADIUS_KM: 15,
+MAX_REQUEST_PER_USER: 5,
+},
+};

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Indixa – Payment</title>
+  <link rel="stylesheet" href="../style.css"/>
+</head>
+
+<body>
+  <h1>Payment</h1>
+
+  <div class="card">
+    <p>Service Amount: ₹<span id="amountText">0</span></p>
+    <p>Platform Commission: ₹<span id="commissionText">0</span></p>
+    <p><b>Payable: ₹<span id="payableText">0</span></b></p>
+  </div>
+
+  <button id="payBtn">Pay Now</button>
+
+  <div class="card" id="statusBox">Waiting for payment…</div>
+
+  <script type="module" src="payment.js"></script>
+</body>
+</html>

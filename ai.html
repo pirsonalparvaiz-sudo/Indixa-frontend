@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Indixa – AI Assistant</title>
+  <link rel="stylesheet" href="../style.css"/>
+</head>
+
+<body>
+  <h1>AI Assistant</h1>
+
+  <!-- LANGUAGE -->
+  <div class="card">
+    <label>
+      Language:
+      <select id="langSelect">
+        <option value="en">English</option>
+        <option value="hi">Hindi</option>
+        <option value="ur">Urdu</option>
+        <option value="bn">Bengali</option>
+        <option value="ta">Tamil</option>
+        <option value="te">Telugu</option>
+      </select>
+    </label>
+  </div>
+
+  <!-- CHAT -->
+  <div class="card" id="chatBox" style="min-height:200px;"></div>
+
+  <input
+    id="chatInput"
+    placeholder="Ask anything…"
+    style="width:100%;padding:12px;"
+  />
+  <button id="sendBtn">Send</button>
+
+  <script type="module" src="ai.js"></script>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Indixa – Admin</title>
+  <link rel="stylesheet" href="../style.css"/>
+</head>
+
+<body>
+  <h1>Admin Control Panel</h1>
+
+  <div class="card">
+    <h3>Feature Control</h3>
+
+    <label>
+      <input type="checkbox" id="locToggle" />
+      Location System
+    </label><br/>
+
+    <label>
+      <input type="checkbox" id="camToggle" />
+      Camera Upload
+    </label><br/>
+
+    <label>
+      <input type="checkbox" id="partnerToggle" />
+      Partner System
+    </label><br/>
+  </div>
+
+  <div class="card">
+    <h3>System Status</h3>
+    <div id="statusBox">Loading…</div>
+  </div>
+
+  <script type="module" src="admin.js"></script>
+</body>
+</html>
