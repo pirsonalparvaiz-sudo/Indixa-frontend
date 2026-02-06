@@ -1,24 +1,69 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-  <meta charset="UTF-8" />
-  <title>Indixa</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="style.css" />
+  <title>Indixa – Frontend</title>
+  <style>
+    body { font-family: Arial; padding: 30px; }
+    button { padding: 10px 15px; margin-right: 10px; }
+    pre { background: #f4f4f4; padding: 15px; }
+  </style>
 </head>
 <body>
 
-  <h1>Indixa – Frontend</h1>
-  <p>Frontend ↔ Backend Connected Demo</p>
+<h1>Indixa – Frontend</h1>
+<p>Frontend ↔ Backend Connected Demo</p>
 
-  <div class="buttons">
-    <button onclick="checkBackend()">Check Backend</button>
-    <button onclick="loadUsers()">Load Users</button>
-    <button onclick="login()">Login</button>
-  </div>
+<button onclick="checkBackend()">Check Backend</button>
+<button onclick="loadUsers()">Load Users</button>
+<button onclick="login()">Login</button>
 
-  <pre id="output">Output will appear here…</pre>
+<pre id="output">Output will appear here...</pre>
 
-  <script src="app.js"></script>
+<script>
+const BACKEND_URL = "https://indixa-backend-zlwm.onrender.com";
+
+async function checkBackend() {
+  try {
+    const res = await fetch(BACKEND_URL + "/health");
+    const data = await res.json();
+    output(data);
+  } catch (e) {
+    output({ error: "Backend not reachable" });
+  }
+}
+
+async function loadUsers() {
+  try {
+    const res = await fetch(BACKEND_URL + "/api/users");
+    const data = await res.json();
+    output(data);
+  } catch (e) {
+    output({ error: "Users API failed" });
+  }
+}
+
+async function login() {
+  try {
+    const res = await fetch(BACKEND_URL + "/api/login", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        email: "test@indixa.com",
+        password: "123456"
+      })
+    });
+    const data = await res.json();
+    output(data);
+  } catch (e) {
+    output({ error: "Login failed" });
+  }
+}
+
+function output(data) {
+  document.getElementById("output").innerText =
+    JSON.stringify(data, null, 2);
+}
+</script>
+
 </body>
 </html>
