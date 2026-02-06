@@ -2,35 +2,23 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Indixa</title>
-  <link rel="stylesheet" href="style.css"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
 </head>
-
 <body>
-  <header>
-    📍 <span id="locationText">Detecting location…</span>
-  </header>
 
-  <main>
-    <h1>Search anything</h1>
+  <h1>Indixa – Frontend</h1>
+  <p>Frontend ↔ Backend Connected Demo</p>
 
-    <input id="searchInput" placeholder="cab, sabzi, koi kaam"/>
+  <div class="buttons">
+    <button onclick="checkBackend()">Check Backend</button>
+    <button onclick="loadUsers()">Load Users</button>
+    <button onclick="login()">Login</button>
+  </div>
 
-    <div class="quick">
-      <button data-q="cab">🚕 Cab</button>
-      <button data-q="grocery">🛒 Grocery</button>
-      <button data-q="service">🔧 Service</button>
-    </div>
+  <pre id="output">Output will appear here…</pre>
 
-    <button id="photoBtn">📷 Upload Photo</button>
-    <input id="camera" type="file" accept="image/*" hidden/>
-
-    <div id="resultBox"></div>
-
-    <a href="partner/partner.html">🤝 Join as Partner</a>
-  </main>
-
-  <script type="module" src="app.js"></script>
+  <script src="app.js"></script>
 </body>
 </html>
